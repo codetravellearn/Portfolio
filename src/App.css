@@ -3,14 +3,19 @@
 
 :root{
   --primary-white: #fff;
-  --primary-orange: #f9ab00;
+  --primary-orange: #f37208;
   --primary-dark: rgba(255,255,255,0);
+  --primary-red: #ef4035;
+  --primary-hover-red: #f33501;
 }
 
 body{
   font-family: "Berkshire Swash" sans-serif ;
 }
 /**************************NAVBAR*****************/
+nav{
+  z-index: 2;
+}
 
 .logo{
   width:10.0rem;
@@ -56,4 +61,68 @@ body{
 .navbar-nav > li > a.active, 
 .navbar-nav> li> a.active:focus{
    border-top: 0.1875rem solid var(--primary-orange);
+}
+
+/*************************** HEADER ****************/
+
+.header-wrapper{
+  position: relative;
+  background: url(laptop.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  filter: grayscale(30%);
+}
+
+.main-info{
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-weight: bold;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Roboto condesed", sans-serif;
+  z-index: 1;
+}
+
+.main-info h1{
+  color: var(--primary-orange);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/***********Typed Text ********/
+.typed-text{
+  font-weight: bold;
+  font-size: 3rem;
+  color: var(--primary-white);
+}
+
+/************* HEADER MAIN OFFER BUTTON ********/
+.btn-main-offer{
+  border: 1px solid var(--primary-red);
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 0.625rem 0.75rem 0.75rem 0.75rem ;
+  color: var(--primary-white);
+  margin: 2rem;
+}
+
+.btn-main-offer:hover{
+  text-decoration: none;
+  background-color:var(--primary-hover-red);
+  color: var(--primary-white);
+  transition: 0.2s ease-in-out;
+}
+/******************* PARTICLES JS ****************/
+.tsparticles-canvas-el {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
 }
